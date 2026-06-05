@@ -1,0 +1,132 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+	background: #f5eeee;
+	margin: 0;
+	padding: 20px;
+}
+.app {
+	max-width: 1400px;
+	margin: 0 auto;
+	background: white;
+	border-radius: 24px;
+	box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+	padding: 20px;
+}
+.toolbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+h2 {
+	margin: 0;
+	font-size: 1.5rem;
+}
+.btn-add {
+	background: #2c7da0;
+	border: none;
+	color: white;
+	font-size: 1.6rem;
+	font-weight: bold;
+	width: 44px;
+	height: 44px;
+	border-radius: 60px;
+	cursor: pointer;
+	transition: 0.2s;
+}
+.btn-add:hover {
+	background: #1f5e7a;
+}
+
+/* Контейнер с горизонтальной прокруткой */
+.table-wrapper {
+	overflow-x: auto;
+	border-radius: 16px;
+	border: 1px solid #e2e8f0;
+}
+
+/* Основная сетка: первая колонка фикс 200px, остальные — по содержимому */
+.grid-table {
+	display: grid;
+	grid-auto-flow: row;   /* важно: строки идут сверху вниз */
+	background: white;
+}
+
+/* Каждая "строка" грида — это отдельный контейнер с display: contents? Нет, проще сделать единую сетку */
+/* Лучше: задаём шаблон колонок для всей сетки, а строки получаются автоматически */
+/* Для этого оборачиваем все ячейки в одну сетку, но тогда надо правильно распределить по строкам.
+   Используем подход: каждая строка — отдельный div с display: grid и одинаковым шаблоном колонок. */
+/* Так проще и надёжнее. */
+.grid-row {
+	display: grid;
+	border-bottom: 1px solid #edf2f7;
+}
+.grid-row:last-child {
+	border-bottom: none;
+}
+/* Ячейки */
+.cell {
+	padding: 12px 16px;
+	border-right: 1px solid #edf2f7;
+	background: white;
+}
+.cell:last-child {
+	border-right: none;
+}
+/* Первая колонка (заголовки параметров) */
+.label-cell {
+	background: #f8fafc;
+	font-weight: 600;
+	color: #0f172a;
+}
+/* Ячейка с селектором */
+.select-cell {
+	background: white;
+}
+select {
+	width: 100%;
+	min-width: 130px;
+	padding: 8px 12px;
+	border-radius: 40px;
+	border: 1px solid #cbd5e1;
+	background: white;
+	font-size: 0.85rem;
+	cursor: pointer;
+}
+
+input {
+	padding: 8px 12px;
+	border-radius: 40px;
+	border: 1px solid #cbd5e1;
+	background: white;
+	font-size: 0.85rem;
+	cursor: pointer;
+}
+/* Шапка колонок (над селекторами) */
+.column-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: 600;
+	background: #f1f5f9;
+	padding: 10px 12px;
+	border-bottom: 1px solid #e2e8f0;
+}
+.btn-remove {
+	background: none;
+	border: none;
+	font-size: 1.2rem;
+	cursor: pointer;
+	color: #94a3b8;
+	border-radius: 20px;
+	width: 28px;
+	height: 28px;
+}
+.btn-remove:hover {
+	background: #fee2e2;
+	color: #b91c1c;
+}
+
