@@ -3,22 +3,27 @@
 <head>
 </head>
 <body>
-<div id='archive' class="form-label">
+<div id='archive' class="form-main">
 	<h2> Калькулятор видеоархива </h2>
-	<span class="form-label">Глубина архива: 
-		<input type = text id = days value = 30 size = "5" style = "text-align: center;"> дней 
-	</span>
+	<div class="days">
+	<div class="text-days">Глубина архива:</div>
+	<div class="form-for-days"><input type = text id = days value = 30 size = "5" style = "text-align: center;"> дней 
+	</div>
+	</div>
 	<div id='group1' class="form-label">
-		<div class="form-label">
+		<div id='group-device' class="form-label">
 			<span class="form-label">Группа устройств</span>
 			<span class="form-control">
 				<input name="name" value="Например: Периметр">
 			</span>
 		</div>
 		<div class="form-label">
-			
+			<div id='q' style='width:300px'>
 			<span class="form-label">Кол-во:</span>
-			<span class="form-control"><input id=inp1 name="cVal" value="16" size="5" style="text-align: center;"></span>
+			</div>
+			<div id='q2'>
+			<input id=inp1 name="cVal" value="16" size="5" style="text-align: center;">
+			</div>
 			
 			<input type=button id="addColumnBtn" class="btn-add" value="+">
 			<div id="flow-form">

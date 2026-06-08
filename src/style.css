@@ -96,7 +96,23 @@ select {
 	font-size: 0.85rem;
 	cursor: pointer;
 }
-
+.form-main {
+	font-size: 16px;
+	width: fit-content;
+	margin: 3%;
+	padding: 3%;
+	border-radius: 3%;
+	background: #fee;
+}
+.days {
+	display: flex;
+	width: 300px;
+	gap: 1.5rem;
+}
+.text-days {
+	flex: 1;
+	margin: auto;
+}
 input {
 	padding: 8px 12px;
 	border-radius: 40px;
@@ -128,5 +144,11 @@ input {
 .btn-remove:hover {
 	background: #fee2e2;
 	color: #b91c1c;
+}
+#q{
+	display:inline;
+}
+#group-device {
+	display:inline;
 }
 
